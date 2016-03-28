@@ -1,0 +1,27 @@
+{
+  "name": "simple-csv-to-json",
+  "version": "1.0.0",
+  "description": "Simple CSV files to JSON converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rs77/simpleCSVtoJSON.git"
+  },
+  "keywords": [
+    "csv",
+    "json",
+    "converter"
+  ],
+  "author": "Ryan Sheehy <rdsheehy@gmail.com> (http://webed.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rs77/simpleCSVtoJSON/issues"
+  },
+  "homepage": "https://github.com/rs77/simpleCSVtoJSON#readme",
+  "devDependencies": {
+    "mocha": "2.4.5"
+  }
+}
