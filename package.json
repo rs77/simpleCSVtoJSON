@@ -1,14 +1,16 @@
 {
   "name": "simple-csv-to-json",
-  "version": "1.0.0",
   "description": "Simple CSV files to JSON converter",
   "main": "index.js",
+  "version": "0.0.0-semantically-released",
   "scripts": {
-    "test": "mocha ./tests/**/*.test.js"
+    "commit": "git-cz",
+    "test": "istanbul cover -x *.test.js _mocha -- -R spec ./tests/**/*.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rs77/simpleCSVtoJSON.git"
+    "url": "https://github.com/rs77/simpleCSVtoJSON.git"
   },
   "keywords": [
     "csv",
@@ -22,6 +24,17 @@
   },
   "homepage": "https://github.com/rs77/simpleCSVtoJSON#readme",
   "devDependencies": {
-    "mocha": "2.4.5"
-  }
+    "chai": "3.5.0",
+    "commitizen": "2.8.1",
+    "cz-conventional-changelog": "1.1.6",
+    "mocha": "2.4.5",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig" : {
+    "path" : "node_modules/cz-conventional-changelog"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
 }
