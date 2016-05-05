@@ -5,6 +5,7 @@
   "version": "0.0.0-semantically-released",
   "scripts": {
     "commit": "git-cz",
+    "check-coverage" : "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "test": "istanbul cover -x *.test.js _mocha -- -R spec ./tests/**/*.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -27,12 +28,16 @@
     "chai": "3.5.0",
     "commitizen": "2.8.1",
     "cz-conventional-changelog": "1.1.6",
+    "ghooks": "1.2.1",
     "mocha": "2.4.5",
     "semantic-release": "^4.3.5"
   },
-  "config" : {
-    "commitizen" : {
-      "path" : "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks" : {
+      "pre-commit" : "npm run test && npm run check-coverage"
     }
   },
   "directories": {
